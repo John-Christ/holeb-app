@@ -6,7 +6,27 @@
       <meta name="author" content="John Christ Bouma"> 
     
     
-   
+   <script type="application/javascript">
+
+function resizeIFrameToFitContent( iFrame ) {
+
+    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+}
+
+window.addEventListener('DOMContentLoaded', function(e) {
+
+    var iFrame = document.getElementById( 'iFrame1' );
+    resizeIFrameToFitContent( iFrame );
+
+    // or, to resize all iframes:
+    var iframes = document.querySelectorAll("iframe");
+    for( var i = 0; i < iframes.length; i++) {
+        resizeIFrameToFitContent( iframes[i] );
+    }
+} );
+
+</script>
     
    
   </head>
@@ -14,7 +34,7 @@
 
 
 
-<iframe id="client" src="https://script.google.com/macros/s/AKfycbwj_qNvWO820K_4fRx2NPXbhlOJHnWC_0Wv5K2Vz3htd1ISYI5qJEBwm1m8x5ELw_Q/exec" frameborder="0" width="100%" height="auto" ></iframe> 
+<iframe id="iFrame1" src="https://script.google.com/macros/s/AKfycbwj_qNvWO820K_4fRx2NPXbhlOJHnWC_0Wv5K2Vz3htd1ISYI5qJEBwm1m8x5ELw_Q/exec" ></iframe> 
  
     
      
