@@ -8,9 +8,15 @@
     
    <script >
 
-function resizeIFrame( obj ) {
-  obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-} 
+$('#iFrame1').load(function () {
+    $(this).height($(this).contents().height());
+    $(this).width($(this).contents().width());
+});
+     
+//function resizeIFrame( obj ) {
+
+
+//} 
 
 </script>
     
@@ -20,7 +26,7 @@ function resizeIFrame( obj ) {
 
 
 
-<iframe id="iFrame1" src="https://script.google.com/macros/s/AKfycbwj_qNvWO820K_4fRx2NPXbhlOJHnWC_0Wv5K2Vz3htd1ISYI5qJEBwm1m8x5ELw_Q/exec" frameborder="0"  scrolling="no"  onload="resizeIframe(this)" ></iframe> 
+<iframe id="iFrame1" src="https://script.google.com/macros/s/AKfycbwj_qNvWO820K_4fRx2NPXbhlOJHnWC_0Wv5K2Vz3htd1ISYI5qJEBwm1m8x5ELw_Q/exec"  frameborder="0"  scrolling="no"  ></iframe> 
  
     
      
