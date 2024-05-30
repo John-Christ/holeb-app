@@ -35,7 +35,62 @@ body {margin:0;}
     
    
   </head>
-  <body >
+
+
+   <body onload="myFunction()">
+   
+   
+    
+  
+
+
+    
+    
+    
+    
+    <style>
+    
+    #attdriver  {
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+    
+    </style>
+    
+     <script>
+      
+       
+    function myFunction() {      
+   setTimeout(showPage, 4000);  
+   setTimeout(enableAutoplay, 1000);
+}
+
+       
+function showPage() {
+  document.getElementById("wait").style.display = "none";
+  
+  
+}
+
+     
+    </script> 
 
 <div class="pos-f-t" id="navbar" >
   <div class="collapse" id="navbarToggleExternalContent">
@@ -50,6 +105,14 @@ body {margin:0;}
     </button>
   </nav>
 </div>
+
+<center>
+ <div  id="wait" style=" display:inline-block;" > 
+      <img src="https://archive.org/download/holeb/holeb.jpg" style="float:right;" id="attdriver" >
+      
+    </div>
+</center>
+     
 
 <iframe id="iframe1" src="https://script.google.com/macros/s/AKfycbwj_qNvWO820K_4fRx2NPXbhlOJHnWC_0Wv5K2Vz3htd1ISYI5qJEBwm1m8x5ELw_Q/exec" frameborder="0" width="100%" height="1280px"  ></iframe> 
  
